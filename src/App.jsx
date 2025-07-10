@@ -6,7 +6,7 @@ import About from "./components/pages/About/About";
 import Service from "./components/pages/Service/Service";
 import Portfolio from "./components/pages/Portfolio/Portfolio";
 import Contact from "./components/pages/Contact/Contact";
-import ScrollToTop from "d:/profile/src/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
