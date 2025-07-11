@@ -36,7 +36,7 @@ const AboutProfile = () => {
     <>
       <div className="d-flex align-item-center justify-content-center">
         <div className="col-12 col-md-10 d-flex justify-content-center">
-          <div className="col-12 w-75 flex-column flex-md-row px-0  mb-5">
+          <div className="col-12 w-75 d-flex flex-column align-items-center px-0  mb-5">
             <div
               className="col-12  d-flex pt-5 align-items-center justify-content-center mb-1"
               style={{
@@ -118,7 +118,7 @@ const AboutProfile = () => {
               <div className="col-12 d-flex justify-content-center align-items-center">
                 <div className="col-8">
                   <div className="p-4 border rounded-4 d-flex flex-column gap-3  justify-content-around  bg-dark">
-                    <div className="text-light fs-3 d-flex justify-content-center align-items-center">
+                    <div className="text-light fs-3 d-flex justify-content-center text-center align-items-center">
                       Follow Me On
                     </div>
                     <div className="d-flex justify-content-around align-items-center">

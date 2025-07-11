@@ -45,7 +45,7 @@ const Hero = () => {
       </div>
 
       <div className="d-flex flex-column align-items-center  justify-content-center my-5  py-5">
-        <div className="py-5">
+        <div className="py-5 d-flex flex-column align-items-center">
           <div className="">
             <h1 className="display-3 fw-bold">PORTFOLIO </h1>
           </div>
