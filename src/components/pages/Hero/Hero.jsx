@@ -44,7 +44,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="d-flex flex-column align-items-center  justify-content-center my-0 my-md-5 py-0 py-md-5">
+      <div className="d-flex flex-column align-items-center  justify-content-center  my-md-5  py-md-5">
         <div className="">
           <h1 className="display-3 fw-bold">PORTFOLIO </h1>
         </div>
