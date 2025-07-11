@@ -25,6 +25,10 @@ const ColorPick = () => {
                       backgroundColor: colors,
                       width: "50px",
                       height: "50px",
+                      border:
+                        colors === pickColor
+                          ? "3px solid black"
+                          : "1px solid #fff ",
                       borderRadius: "25px",
                       cursor: "pointer",
                       transition: "0.3s",
