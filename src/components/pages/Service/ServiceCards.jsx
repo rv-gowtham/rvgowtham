@@ -28,7 +28,7 @@ const ServiceCards = () => {
   return (
     <>
       <div className="container">
-        <div className="d-flex justify-content-between flex-column flex-md-row align-items-center gap-5 my-5 py-5">
+        <div className="d-flex justify-content-between flex-column flex-md-row align-items-center gap-5 mt-5 mb-2 pt-5 pb-2">
           {Service.map((serviceData, index) => (
             <div
               className="serviceCard rounded-2 d-flex flex-column align-items-center row-gap-4 p-5"
