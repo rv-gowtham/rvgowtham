@@ -36,34 +36,43 @@ const AboutProfile = () => {
     <>
       <div className="d-flex align-item-center justify-content-center">
         <div className="col-12 col-md-10 d-flex justify-content-center">
-          <div className="col-10 w-75 flex-column flex-md-row px-0  mb-5">
+          <div className="col-12 w-75 flex-column flex-md-row px-0  mb-5">
             <div
               className="col-12  d-flex pt-5 align-items-center justify-content-center mb-1"
-              style={{ marginTop: "100px", marginBottom: "100px" }}
+              style={{
+                marginTop: "100px",
+                marginBottom: "100px",
+                maxWidth: "500px",
+              }}
             >
-              <div className="col-6  border rounded-4">
+              <div className="col-9 col-md-7  border rounded-4">
                 <div
                   className="col-12 d-flex justify-content-between text-light rounded-top-4 p-0 p-md-2 px-0 px-md-3"
                   style={{ backgroundColor: "#1a1a1a" }}
                 >
-                  <div className="col-10 p-2 d-flex align-items-center gap-1 gap-md-2">
+                  <div className="col-12 col-md-10 p-2 p-md-0 d-flex justify-content-start  align-items-center gap-1 gap-md-2">
                     <img
-                      className="border rounded-5 p-1"
+                      className="border rounded-5 p-1 "
                       src={profilesimg}
                       style={{ maxWidth: "50px", maxHeight: "50px" }}
                       alt=""
                     />
-                    <p className="m-0 fs-6 fs-md-4 text-break">@_rvgowtham</p>
+                    <p className="m-0  text-break" style={{ fontSize: ".7em" }}>
+                      @_rvgowtham
+                    </p>
                   </div>
-                  <div className="col-2 p-2 d-flex align-items-center justify-content-end ">
+                  <div className="col-2 p-2 d-none  d-md-block d-md-flex align-items-center  justify-content-end ">
                     <HiOutlineDotsHorizontal className="fs-3" />
                   </div>
                 </div>
-                <div className="w-100" style={{ backgroundColor: "#ffd" }}>
+                <div
+                  className="d-flex justify-content-center"
+                  style={{ backgroundColor: "#ffd" }}
+                >
                   <img
-                    className="w-100"
+                    className="w-75"
                     src={profileimg}
-                    style={{ maxHeight: "400px" }}
+                    style={{ maxHeight: "300px" }}
                     alt=""
                   />
                 </div>
@@ -72,7 +81,7 @@ const AboutProfile = () => {
                   className="col-12 rounded-bottom-4 p-4 p-3 d-flex justify-content-between"
                   style={{ backgroundColor: "#1a1a1a" }}
                 >
-                  <div className="col-11 d-flex gap-3">
+                  <div className="col-11 d-flex gap-3 align-items-center">
                     <button
                       onClick={clickMe}
                       type="button"
@@ -112,7 +121,7 @@ const AboutProfile = () => {
                     <div className="text-light fs-3 d-flex justify-content-center align-items-center">
                       Follow Me On
                     </div>
-                    <div className="d-flex justify-content-around ">
+                    <div className="d-flex justify-content-around align-items-center">
                       <a href="https://www.linkedin.com/in/rv-gowtham-44900a27b/">
                         <FaLinkedinIn className="fw-bold text-light fs-3" />
                       </a>

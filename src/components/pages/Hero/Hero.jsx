@@ -18,8 +18,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="my-0 my-md-5 py-0 py-md-5">
-        <div>
+      <div className="col-12 mb-0 my-mb-5 pb-0 pb-md-5  d-flex flex-column align-items-center justify-content-center">
+        <div className="col-12 col-md-7">
           <AboutProfile />
         </div>
         <div className=" d-flex justify-content-center">
