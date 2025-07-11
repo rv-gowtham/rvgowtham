@@ -29,7 +29,7 @@ const HeroBoxOne = () => {
             <div className="hero_btn d-flex gap-3 pt-4 align-items-center">
               <div>
                 <Link to="/about">
-                  <button className="herobtn1 fs-4 border px-3 py-2 rounded-2">
+                  <button className="herobtn1 fs-4 border px-3 py-1 rounded-2">
                     KNOW MORE
                   </button>
                 </Link>
@@ -37,7 +37,7 @@ const HeroBoxOne = () => {
               <div className="m-0 p-0">
                 <Link
                   to="/portfolio"
-                  className="herobtn2 border fs-4 px-3 py-2 rounded-2 text-decoration-none"
+                  className="herobtn2 border fs-4 px-2 py-2 rounded-2 text-decoration-none"
                   href=""
                 >
                   GET CV
