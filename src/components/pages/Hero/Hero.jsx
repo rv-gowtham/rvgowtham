@@ -45,17 +45,19 @@ const Hero = () => {
       </div>
 
       <div className="d-flex flex-column align-items-center  justify-content-center my-5  py-5">
-        <div className="">
-          <h1 className="display-3 fw-bold">PORTFOLIO </h1>
-        </div>
-        <h4>PICK COLORS HERE</h4>
-        <br />
-        <div className=" d-flex justify-content-center">
-          <Link to="/portfolio">
-            <button type="button" className="btn btn-outline-dark">
-              KNOW MORE
-            </button>
-          </Link>
+        <div className="py-5">
+          <div className="">
+            <h1 className="display-3 fw-bold">PORTFOLIO </h1>
+          </div>
+          <h4>PICK COLORS HERE</h4>
+          <br />
+          <div className=" d-flex justify-content-center">
+            <Link to="/portfolio">
+              <button type="button" className="btn btn-outline-dark">
+                KNOW MORE
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
