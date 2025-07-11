@@ -54,7 +54,7 @@ const Hero = () => {
           <div className=" d-flex justify-content-center">
             <Link to="/portfolio">
               <button type="button" className="btn btn-outline-dark">
-                KNOW MORE
+                PICK
               </button>
             </Link>
           </div>
