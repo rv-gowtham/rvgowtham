@@ -73,14 +73,15 @@ const Resume = ({ pickColor }) => {
                 </div>
               </div>
             </div>
-            <hr style={{ border: `2px solid ${picks}` }} />
+            <hr style={{ border: `1px solid ${picks}` }} />
 
             <div>
               <h2>Profile Summary </h2>
             </div>
 
             <div>
-              <p>
+              <p className="">
+                <span className="ms-5"></span>
                 Aspiring Full-Stack Developer with a solid foundation in
                 computer science and a strong work ethic. Skilled in solving
                 real world problems through efficient coding, teamwork, and
@@ -90,6 +91,7 @@ const Resume = ({ pickColor }) => {
                 expertise and contribute to impactful software solutions.
               </p>
             </div>
+            <br />
 
             <div>
               <h2>Skills</h2>
@@ -104,12 +106,129 @@ const Resume = ({ pickColor }) => {
                 ))}
               </ul>
             </div>
+            <br />
 
             <div>
-              <h2>Project</h2>
+              <div>
+                <h2>Project</h2>
+              </div>
+              <div>Real-time Weather Application ( CLEAR ✨ )</div>
+              <div>
+                <strong>Tech Stack : </strong> React.js, Bootstrap,
+                OpenWeatherMap API
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    Built a real-time weather application using React.js, styled
+                    with Bootstrap for responsive design.
+                  </li>
+                  <li>
+                    Integrated OpenWeatherMap API to fetch and display live
+                    weather data based on user input (city/region).
+                  </li>
+                  <li>
+                    Implemented components for current temperature, humidity,
+                    conditions, and forecast visuals.
+                  </li>
+                  <li>
+                    Focused on usability and clean UI/UX, ensuring accessibility
+                    across screen sizes.
+                  </li>
+                  <div>
+                    <a href="https://clear-rv.vercel.app">Link</a>
+                  </div>
+                </ul>
+              </div>
+              <br />
+              <div>Personal Portfolio Website</div>
+              <div>
+                <strong>Tech Stack : </strong> React.js, Bootstrap
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    Developed a responsive personal portfolio website using
+                    React.js and Bootstrap, showcasing skills, projects, and
+                    contact information.
+                  </li>
+                  <li>
+                    Implemented reusable React components for scalability and
+                    modularity.
+                  </li>
+                  <li>
+                    Designed a clean, modern UI using Bootstrap for enhanced
+                    user experience across devices.
+                  </li>
+                  <li>
+                    Integrated a functional contact form for user communication.
+                  </li>
+                  <div>
+                    <a href="https://rvgowtham.vercel.app">Link</a>
+                  </div>
+                </ul>
+              </div>
             </div>
-            <div>Real-time Weather Application ( CLEAR ✨ )</div>
-            <div>Tech Stack: React.js, Bootstrap, OpenWeatherMap API </div>
+            <br />
+
+            {/* education */}
+            <div>
+              <div>
+                <h2>Education</h2>
+              </div>
+              <div>
+                Batchelor of Engineering ( B.E.) – Computers Science and
+                Engineering
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>
+                  Dhanalakshmi College of Engineering, Tambaram, Chennai ( CGPA
+                  : 8.01 )
+                </div>
+                <div>2021 – 2025</div>
+              </div>
+
+              <div>Higher Secondary ( HSC ) – Bio - Maths</div>
+              <div className="d-flex justify-content-between">
+                <div>
+                  TNPMMN Hr Sec School, Thalavaipuram, Rajapalayam (Score : 486
+                  / 600 )
+                </div>
+                <div>2020 – 2021</div>
+              </div>
+            </div>
+            <br />
+
+            {/* internship */}
+            <div>
+              <div>
+                <h2>Internship</h2>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>PanTech Pvt. Ltd. – Artificial Intelligence </div>
+                <div>Jul – 2023 | Chennai </div>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>VultureLine , Ui / Ux </div>
+                <div>Aug – 2024 | Chennai </div>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>Boston Nex Tex – MERN Stack</div>
+                <div>Jun – 2025 | Chennai </div>
+              </div>
+            </div>
+            <br />
+
+            {/* Certifications */}
+            <div className="pb-5">
+              <div>
+                <h2>Certification</h2>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>Google Career Certifications, Data Analytics </div>
+                <div>Nov – 2023 | Chennai</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
