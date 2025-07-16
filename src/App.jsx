@@ -7,6 +7,7 @@ import Service from "./components/pages/Service/Service";
 import Portfolio from "./components/pages/Portfolio/Portfolio";
 import Contact from "./components/pages/Contact/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import Errorpage from "./components/pages/404/Errorpage";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
               element={<Layout page={<Portfolio />} />}
             />
             <Route path="/contact" element={<Layout page={<Contact />} />} />
+
+            <Route path="*" element={<Errorpage />} />
           </Routes>
         </Router>
       </div>
