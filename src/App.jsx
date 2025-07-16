@@ -17,15 +17,17 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Layout page={<Hero />} />} />
+
             <Route path="/about" element={<Layout page={<About />} />} />
+
             <Route path="/service" element={<Layout page={<Service />} />} />
+
             <Route
               path="/portfolio"
               element={<Layout page={<Portfolio />} />}
             />
-            <Route path="/contact" element={<Layout page={<Contact />} />} />
 
-            <Route path="*" element={<Errorpage />} />
+            <Route path="/contact" element={<Layout page={<Contact />} />} />
           </Routes>
         </Router>
       </div>
