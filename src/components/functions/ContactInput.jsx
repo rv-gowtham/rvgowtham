@@ -1,29 +1,43 @@
 import React, { useState } from "react";
 
 const ContactInput = () => {
-  const [name, setName] = useState("");
   const [updateName, setUpdateName] = useState("");
-
-  const [email, setEmail] = useState("");
   const [updateEmail, setUpdateEmail] = useState("");
-
-  const [subject, setSubject] = useState("");
   const [updateSubject, setUpdateSubject] = useState("");
-
-  const [message, setMessage] = useState("");
   const [updateMessage, setUpdateMessage] = useState("");
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    setName(updateName);
-    setEmail(updateEmail);
-    setSubject(updateSubject);
-    setMessage(updateMessage);
-    setUpdateName("");
-    setUpdateEmail("");
-    setUpdateSubject("");
-    setUpdateMessage("");
-    console.log({ name, email, subject, message });
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: updateName,
+          email: updateEmail,
+          subject: updateSubject,
+          message: updateMessage,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message || "Submitted Successfully");
+        setUpdateName("");
+        setUpdateEmail("");
+        setUpdateSubject("");
+        setUpdateMessage("");
+      } else {
+        alert(data.error || "Submission Failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Server Error");
+    }
   };
 
   return (
@@ -89,7 +103,7 @@ const ContactInput = () => {
             </div>
             <div className="d-flex justify-content-end pt-4">
               <button
-                className="btn btn-outline-primary "
+                className="btn btn-outline-primary"
                 style={{ width: "150px", height: "40px" }}
                 type="submit"
               >

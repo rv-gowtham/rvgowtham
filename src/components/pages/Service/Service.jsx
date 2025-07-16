@@ -27,7 +27,9 @@ const Service = () => {
           </div>
         </div>
         <div>
-          <div>{/* <Clients /> */}</div>
+          <div>
+            <Clients />
+          </div>
         </div>
       </div>
     </>
