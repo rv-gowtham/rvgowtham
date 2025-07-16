@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const ContactInput = () => {
   const [updateName, setUpdateName] = useState("");
@@ -6,37 +7,33 @@ const ContactInput = () => {
   const [updateSubject, setUpdateSubject] = useState("");
   const [updateMessage, setUpdateMessage] = useState("");
 
+  const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: updateName,
-          email: updateEmail,
-          subject: updateSubject,
-          message: updateMessage,
-        }),
+      const response = await axios.post(`${BASE_URL}/api/contact`, {
+        name: updateName,
+        email: updateEmail,
+        subject: updateSubject,
+        message: updateMessage,
       });
 
-      const data = await response.json();
+      alert(response.data.message || "Submitted Successfully");
 
-      if (response.ok) {
-        alert(data.message || "Submitted Successfully");
-        setUpdateName("");
-        setUpdateEmail("");
-        setUpdateSubject("");
-        setUpdateMessage("");
-      } else {
-        alert(data.error || "Submission Failed");
-      }
+      // Reset form
+      setUpdateName("");
+      setUpdateEmail("");
+      setUpdateSubject("");
+      setUpdateMessage("");
     } catch (error) {
       console.error("Error:", error);
-      alert("Server Error");
+      if (error.response?.data?.error) {
+        alert(error.response.data.error);
+      } else {
+        alert("Server Error");
+      }
     }
   };
 
