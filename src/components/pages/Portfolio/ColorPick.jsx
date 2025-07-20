@@ -43,8 +43,8 @@ const ColorPick = () => {
               <div className="col-11">
                 <h2>Download Resume</h2>
                 <a
-                  href=""
-                  download={resumepdf}
+                  href={resumepdf}
+                  download="rvgowtham.pdf"
                   className="btn btn-outline-dark px-5"
                 >
                   NOW
