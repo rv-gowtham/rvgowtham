@@ -67,8 +67,7 @@ const Resume = ({ pickColor }) => {
                 </div>
                 <div>
                   <h5 className="text-center text-md-start text-break">
-                    Rajapalayam | 7373512561 | rvgowtham6@gmail.com | LinkedIn |
-                    GitHub
+                    7373512561 | rvgowtham6@gmail.com | LinkedIn | GitHub
                   </h5>
                 </div>
               </div>
@@ -112,7 +111,9 @@ const Resume = ({ pickColor }) => {
               <div>
                 <h2>Project</h2>
               </div>
-              <div>Real-time Weather Application ( CLEAR ✨ )</div>
+              <div className="fw-bold">
+                Real-time Weather Application ( CLEAR ✨ )
+              </div>
               <div>
                 <strong>Tech Stack : </strong> React.js, Bootstrap,
                 OpenWeatherMap API
@@ -141,7 +142,7 @@ const Resume = ({ pickColor }) => {
                 </ul>
               </div>
               <br />
-              <div>Personal Portfolio Website</div>
+              <div className="fw-bold">Personal Portfolio Website</div>
               <div>
                 <strong>Tech Stack : </strong> React.js, Bootstrap
               </div>
@@ -180,7 +181,7 @@ const Resume = ({ pickColor }) => {
                 Batchelor of Engineering ( B.E.) – Computers Science and
                 Engineering
               </div>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between pb-3">
                 <div>
                   Dhanalakshmi College of Engineering, Tambaram, Chennai ( CGPA
                   : 8.01 )
@@ -211,10 +212,6 @@ const Resume = ({ pickColor }) => {
               <div className="d-flex justify-content-between">
                 <div>VultureLine , Ui / Ux </div>
                 <div>Aug – 2024 | Chennai </div>
-              </div>
-              <div className="d-flex justify-content-between">
-                <div>Boston Nex Tex – MERN Stack</div>
-                <div>Jun – 2025 | Chennai </div>
               </div>
             </div>
             <br />

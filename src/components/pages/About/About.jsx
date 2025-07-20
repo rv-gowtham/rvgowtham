@@ -3,6 +3,9 @@ import { ABOUT } from "../Headers";
 import scrolldown from "../../../assets/scroll-down.gif";
 import AboutProfile from "./AboutProfile";
 import AboutAside from "./AboutAside";
+import { Link } from "react-router-dom";
+import Skillset from "./Skillset";
+import Project from "./Project";
 
 const About = () => {
   return (
@@ -24,6 +27,34 @@ const About = () => {
             <AboutAside />
           </div>
         </div>
+
+        <div>
+          <div className="my-5 py-5">
+            <Skillset />
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <Project />
+          </div>
+        </div>
+
+        {/* <div className="container">
+          <div className="col-12 d-flex align-items-center justify-content-center">
+            <div className="col-12">
+              <h2>Download Resume</h2>
+              <div className="">
+                <Link
+                  to="/portfolio"
+                  className="text-decoration-none btn btn-outline-dark px-5"
+                >
+                  NOW
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </>
   );

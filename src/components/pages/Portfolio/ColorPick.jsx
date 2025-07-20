@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Resume from "./Resume";
+import resumepdf from "../../../assets/rvgowtham.pdf";
 
 const ColorPick = () => {
   const [pickColor, setPickColor] = useState("black");
@@ -35,6 +36,19 @@ const ColorPick = () => {
                     }}
                   ></div>
                 ))}
+              </div>
+            </div>
+
+            <div className="col-12 d-flex align-items-center justify-content-center">
+              <div className="col-11">
+                <h2>Download Resume</h2>
+                <a
+                  href=""
+                  download={resumepdf}
+                  className="btn btn-outline-dark px-5"
+                >
+                  NOW
+                </a>
               </div>
             </div>
 
