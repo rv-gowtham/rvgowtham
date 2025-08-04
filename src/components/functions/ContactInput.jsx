@@ -6,11 +6,15 @@ const ContactInput = () => {
   const [updateEmail, setUpdateEmail] = useState("");
   const [updateSubject, setUpdateSubject] = useState("");
   const [updateMessage, setUpdateMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setSuccessMessage("");
 
     try {
       const response = await axios.post(`${BASE_URL}/api/contact`, {
@@ -20,9 +24,8 @@ const ContactInput = () => {
         message: updateMessage,
       });
 
-      alert(response.data.message || "Submitted Successfully");
+      setSuccessMessage(response.data.message || "Submitted Successfully");
 
-      // Reset form
       setUpdateName("");
       setUpdateEmail("");
       setUpdateSubject("");
@@ -34,6 +37,8 @@ const ContactInput = () => {
       } else {
         alert("Server Error");
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -53,8 +58,10 @@ const ContactInput = () => {
                 value={updateName}
                 onChange={(e) => setUpdateName(e.target.value)}
                 required
+                disabled={loading}
               />
             </div>
+
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 EMAIL :
@@ -66,8 +73,10 @@ const ContactInput = () => {
                 value={updateEmail}
                 onChange={(e) => setUpdateEmail(e.target.value)}
                 required
+                disabled={loading}
               />
             </div>
+
             <div className="mb-3">
               <label htmlFor="subject" className="form-label">
                 SUBJECT :
@@ -79,6 +88,7 @@ const ContactInput = () => {
                 value={updateSubject}
                 onChange={(e) => setUpdateSubject(e.target.value)}
                 required
+                disabled={loading}
               />
             </div>
           </div>
@@ -96,20 +106,29 @@ const ContactInput = () => {
                 value={updateMessage}
                 onChange={(e) => setUpdateMessage(e.target.value)}
                 required
+                disabled={loading}
               ></textarea>
             </div>
+
             <div className="d-flex justify-content-end pt-4">
               <button
                 className="btn btn-outline-primary"
                 style={{ width: "150px", height: "40px" }}
                 type="submit"
+                disabled={loading}
               >
-                SUBMIT
+                {loading ? "Submitting..." : "SUBMIT"}
               </button>
             </div>
           </div>
         </div>
       </form>
+
+      {successMessage && (
+        <div className="text-success text-center mt-3 fw-bold">
+          {successMessage}
+        </div>
+      )}
     </div>
   );
 };
