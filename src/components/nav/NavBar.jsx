@@ -15,35 +15,42 @@ function NavBar() {
   return (
     <Navbar
       expand="md"
-      className="bg-body-tertiary mb-3 position-sticky top-0"
-      style={{ zIndex: "1000" }}
+      className="bg-light shadow-sm mb-3 position-sticky top-0"
+      style={{ zIndex: 1000 }}
     >
-      <Container fluid>
-        <div className="ms-0 ms-md-3">
-          <Link to="/">
-            <img
-              className="ms-0 ms-md-4"
-              src={Logo}
-              alt="Logo"
-              style={{ width: "75px", height: "75px" }}
-            />
-          </Link>
-        </div>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
+      <Container fluid className="px-3">
+        <Link to="/" className="d-flex align-items-center">
+          <img
+            src={Logo}
+            alt="Website Logo"
+            className="ms-md-3"
+            style={{ width: "75px", height: "75px" }}
+          />
+        </Link>
+
+        <Navbar.Toggle
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+          onClick={handleShow}
+        />
+
         <Navbar.Offcanvas
           id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          placement="end"
           show={showOffcanvas}
           onHide={handleClose}
-          placement="end"
-          aria-labelledby="offcanvasNavbarLabel"
+          scroll={true} // Optional to allow background scroll
+          backdrop={true}
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
-              <img src={Logo} alt="Logo" style={{ width: "50px" }} />
+              <img src={Logo} alt="Offcanvas Logo" style={{ width: "50px" }} />
             </Offcanvas.Title>
           </Offcanvas.Header>
+
           <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
+            <Nav className="ms-auto d-flex fs-5 flex-column flex-md-row align-items-start align-items-md-center">
               {[
                 { to: "/", label: "HOME" },
                 { to: "/about", label: "ABOUT" },
@@ -53,9 +60,9 @@ function NavBar() {
               ].map((link) => (
                 <Link
                   key={link.to}
-                  className="text-decoration-none fs-5 text-dark fw-semibold px-3"
                   to={link.to}
-                  style={{ letterSpacing: "0.1cm" }}
+                  className="nav-link px-md-3 py-2 text-dark fw-semibold text-uppercase"
+                  style={{ letterSpacing: "0.05rem" }}
                   onClick={handleClose}
                 >
                   {link.label}
